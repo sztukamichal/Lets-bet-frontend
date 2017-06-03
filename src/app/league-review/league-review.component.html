@@ -1,0 +1,31 @@
+<md-card>
+  <md-card-title class="text-center">Last results</md-card-title>
+  <md-card-content class="text-center">
+    <span class="my-spacing-input">
+      <md-select placeholder="Choose league" [(ngModel)]="selectedLeague" name="league">
+        <md-option *ngFor="let league of leagues" [value]="league.value">
+          {{league.viewValue}}
+        </md-option>
+      </md-select>
+    </span>
+    <span class="my-spacing-input">
+      <md-input-container>
+        <input mdInput placeholder="Search" value="Bayern">
+      </md-input-container>
+    </span>
+    <span class="my-spacing-input">
+      <md-input-container>
+        <input mdInput [mdDatepicker]="myDatepicker">
+        <button mdSuffix [mdDatepickerToggle]="myDatepicker"></button>
+      </md-input-container>
+      <md-datepicker #myDatepicker></md-datepicker>
+    </span>
+  </md-card-content>
+</md-card>
+<div class="my-spacing-div">
+  <md-tab-group>
+    <md-tab label="Matches">Content 1</md-tab>
+    <md-tab label="Table">Content 2</md-tab>
+    <md-tab label="Teams">Content 3</md-tab>
+  </md-tab-group>
+</div>
