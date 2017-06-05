@@ -9,7 +9,7 @@ import {Match} from '../model/Match';
 export class LeagueReviewComponent implements OnInit {
 
   selectedLeague: string;
-  league: object = {
+  league: any = {
     name: 'Bundesliga',
     URI: 'http://logok.org/wp-content/uploads/2014/12/Bundesliga-logo-2010.png'
   };

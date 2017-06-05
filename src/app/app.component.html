@@ -1,7 +1,8 @@
 <td-layout-nav-list color="primary"
-                    [opened]="media.registerQuery('gt-sm') | async"
+                    opened="false"
                     [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'over'"
                     [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '250px' : '100%'">
+  <!--[opened]="media.registerQuery('gt-sm') | async"-->
   <div td-sidenav-toolbar-content>
     <span class="my-greeting" *ngIf="media.registerQuery('gt-sm') | async">
       Welcome, guest!
