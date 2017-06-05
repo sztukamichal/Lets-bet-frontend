@@ -14,16 +14,13 @@ import {
   MdToolbarModule
 } from "@angular/material";
 import 'hammerjs';
-import { HeaderComponent } from './header/header.component';
-import { SideNavComponent } from './side-nav/side-nav.component';
 import { LeagueReviewComponent } from './league-review/league-review.component'
+import {CovalentLayoutModule, TdMediaService} from "@covalent/core";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoggingComponent,
-    HeaderComponent,
-    SideNavComponent,
     LeagueReviewComponent
   ],
   imports: [
@@ -41,9 +38,10 @@ import { LeagueReviewComponent } from './league-review/league-review.component'
     MdInputModule,
     MdDatepickerModule,
     MdNativeDateModule,
-    MdTabsModule
+    MdTabsModule,
+    CovalentLayoutModule
   ],
-  providers: [],
+  providers: [TdMediaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

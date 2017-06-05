@@ -1,0 +1,10 @@
+.my-greeting {
+  font-family: 'Dancing Script', cursive;
+  padding-left: 20px;
+}
+.my-main-content {
+  padding: 20px 100px 20px 100px;
+}
+.my-spacer{
+  flex: 1 1 auto;
+}

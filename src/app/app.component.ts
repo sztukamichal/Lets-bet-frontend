@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {TdMediaService} from "@covalent/core";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  constructor(
+    public media: TdMediaService
+  ) {}
+
+  ngAfterViewInit(): void {
+    this.media.broadcast();
+  }
+
 }

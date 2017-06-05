@@ -1,2 +1,29 @@
-<app-header></app-header>
-<app-side-nav></app-side-nav>
+<td-layout-nav-list color="primary"
+                    [opened]="media.registerQuery('gt-sm') | async"
+                    [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'over'"
+                    [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '250px' : '100%'">
+  <div td-sidenav-toolbar-content>
+    <span class="my-greeting" *ngIf="media.registerQuery('gt-sm') | async">
+      Welcome, guest!
+    </span>
+  </div>
+  <div td-toolbar-content>
+    <span class="my-greeting" *ngIf="!(media.registerQuery('gt-sm') | async)">
+      Welcome, guest!
+    </span>
+  </div>
+  <md-nav-list td-sidenav-content>
+    <ul>
+      <li>Home</li>
+      <li>Gameplay's</li>
+      <li>About</li>
+    </ul>
+  </md-nav-list>
+  <div td-toolbar-content>
+    <md-icon style="position: absolute; right: 15px; top:20px">more_vert</md-icon>
+  </div>
+  <div class="my-main-content">
+    <router-outlet></router-outlet>
+  </div>
+</td-layout-nav-list>
+
