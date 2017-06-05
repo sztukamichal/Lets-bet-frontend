@@ -7,6 +7,22 @@
   /*width: 200px;*/
 /*}*/
 
+.my-spacing-input {
+  margin: 0 10px 0 10px;
+}
+.my-spacing-div {
+  margin: 50px 0 10px 0;
+}
+.my-logo {
+  height: 60px;
+  width: 60px;
+}
+.my-team-name {
+  font-size: initial;
+}
+.my-result {
+  font-size: large;
+}
 .text-center {
   text-align: center;
 }
@@ -16,6 +32,14 @@
   font-style: normal;
   font-weight: 400;
   src: local('Material Icons'), local('MaterialIcons-Regular'), url(https://fonts.gstatic.com/s/materialicons/v22/2fcrYFNaTjcS6g4U3t-Y5UEw0lE80llgEseQY3FEmqw.woff2) format('woff2');
+}
+
+.my-main-content {
+  height: calc(100% - 40px);
+  overflow: auto;
+  display: block;
+  background-image: url("assets/background.jpg");
+  background-size: cover;
 }
 
 .material-icons {

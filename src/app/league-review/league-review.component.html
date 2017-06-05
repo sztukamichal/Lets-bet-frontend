@@ -24,17 +24,19 @@
 </md-card>
 <div class="my-spacing-div">
   <md-card>
-    <md-card-title class="text-center">Bundesliga</md-card-title>
+    <md-card-title class="text-center">
+      <img [src]="league.URI" class="my-logo" align="center">
+      {{league.name}}
+    </md-card-title>
     <md-tab-group>
-      <md-tab label="Matches">
-        <md-card>
-          <md-card-content class="text-center">
-            Bayern Monachium 0 : 0 Borussia Dortmund
-          </md-card-content>
-        </md-card>
-      </md-tab>
-      <md-tab label="Table">Content 2</md-tab>
-      <md-tab label="Teams">Content 3</md-tab>
+      <div class="my-container">
+
+        <md-tab label="Matches">
+          <app-match-card [match]="match"></app-match-card>
+        </md-tab>
+        <md-tab label="Table">Content 2</md-tab>
+        <md-tab label="Teams">Content 3</md-tab>
+      </div>
     </md-tab-group>
   </md-card>
 </div>

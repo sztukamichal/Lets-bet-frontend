@@ -16,12 +16,14 @@ import {
 import 'hammerjs';
 import { LeagueReviewComponent } from './league-review/league-review.component'
 import {CovalentLayoutModule, TdMediaService} from "@covalent/core";
+import { MatchCardComponent } from './match-card/match-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoggingComponent,
-    LeagueReviewComponent
+    LeagueReviewComponent,
+    MatchCardComponent
   ],
   imports: [
     BrowserModule,
