@@ -5,8 +5,8 @@ import {LoggingComponent} from "../logging/logging.component";
 import {LeagueReviewComponent} from "../league-review/league-review.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: '/league-review', pathMatch: 'full'},
-  { path: 'logging', component: LoggingComponent},
+  { path: '', redirectTo: '/sign-in', pathMatch: 'full'},
+  { path: 'sign-in', component: LoggingComponent},
   { path: 'league-review', component: LeagueReviewComponent}
 
 ];

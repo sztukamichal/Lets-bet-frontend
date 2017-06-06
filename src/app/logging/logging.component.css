@@ -1,15 +1,14 @@
 .box {
   position: relative;
   top: 0;
-  opacity: 1;
   float: left;
   padding: 60px 50px 40px 50px;
   width: 100%;
   background: #fff;
   border-radius: 10px;
-  transform: scale(1);
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
+  /*transform: scale(1);*/
+  /*-webkit-transform: scale(1);*/
+  /*-ms-transform: scale(1);*/
   z-index: 5;
 }
 
@@ -37,44 +36,11 @@
   z-index: -1;
 }
 
-.overbox .title {
-  color: #fff;
-}
-
-.overbox .title:before {
-  background: #fff;
-}
-
-.title {
-  width: 100%;
-  float: left;
-  line-height: 46px;
-  font-size: 34px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: #558B2F;
-  position: relative;
-}
-
-.title:before {
-  content: "";
-  width: 5px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: -50px;
-  background: #558B2F;
-}
-
-.input,
-.input label,
-.input input,
-.input .spin,
-.button,
-.button button .button.login button i.fa,
+.my-overlap-container,
+.my-overlap-container button .my-overlap-container.login button i.fa,
 .material-button .shape:before,
 .material-button .shape:after,
-.button.login button {
+.my-overlap-container.login button {
   transition: 300ms cubic-bezier(.4, 0, .2, 1);
   -webkit-transition: 300ms cubic-bezier(.4, 0, .2, 1);
   -ms-transition: 300ms cubic-bezier(.4, 0, .2, 1);
@@ -90,176 +56,13 @@
   -ms-transition: 400ms cubic-bezier(.4, 0, .2, 1);
 }
 
-.input,
-.input label,
-.input input,
-.input .spin,
-.button,
-.button button {
+.overbox .my-title,
+.overbox .my-overlap-container {
+  z-index: 111;
+  position: relative;
+  display: none;
   width: 100%;
   float: left;
-}
-
-.input,
-.button {
-  margin-top: 30px;
-  height: 70px;
-}
-
-.input,
-.input input,
-.button,
-.button button {
-  position: relative;
-}
-
-.input input {
-  height: 60px;
-  top: 10px;
-  border: none;
-  background: transparent;
-}
-
-.input input,
-.input label,
-.button button {
-  font-family: 'Roboto', sans-serif;
-  font-size: 24px;
-  color: rgba(0, 0, 0, 0.8);
-  font-weight: 300;
-}
-
-.input:before,
-.input .spin {
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.input:before {
-  content: "";
-  background: rgba(0, 0, 0, 0.1);
-  z-index: 3;
-}
-
-.input .spin {
-  background: #558B2F;
-  z-index: 4;
-  width: 0;
-}
-
-.overbox .input .spin {
-  background: rgba(255, 255, 255, 1);
-}
-
-.overbox .input:before {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-.input label {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  z-index: 2;
-  cursor: pointer;
-  line-height: 60px;
-}
-
-.button.login {
-  width: 60%;
-  left: 20%;
-}
-
-.button.login button,
-.button button {
-  width: 100%;
-  line-height: 64px;
-  left: 0%;
-  background-color: transparent;
-  border: 3px solid rgba(0, 0, 0, 0.1);
-  font-weight: 900;
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.2);
-}
-
-.button.login {
-  margin-top: 30px;
-}
-
-.button {
-  margin-top: 20px;
-}
-
-.button button {
-  background-color: #fff;
-  color: #558B2F;
-  border: none;
-}
-
-.button.login button.active {
-  border: 3px solid transparent;
-  color: #fff !important;
-}
-
-.button.login button.active span {
-  opacity: 0;
-  transform: scale(0);
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-}
-
-.button.login button.active i.fa {
-  opacity: 1;
-  transform: scale(1) rotate(-0deg);
-  -webkit-transform: scale(1) rotate(-0deg);
-  -ms-transform: scale(1) rotate(-0deg);
-}
-
-.button.login button i.fa {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  line-height: 60px;
-  transform: scale(0) rotate(-45deg);
-  -webkit-transform: scale(0) rotate(-45deg);
-  -ms-transform: scale(0) rotate(-45deg);
-}
-
-.button.login button:hover {
-  color: #558B2F;
-  border-color: #558B2F;
-}
-
-.button {
-  margin: 40px 0;
-  overflow: hidden;
-  z-index: 2;
-}
-
-.button button {
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-}
-
-.pass-forgot {
-  width: 100%;
-  float: left;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.4);
-  font-size: 18px;
-}
-
-.click-efect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #558B2F;
-  border-radius: 50%;
 }
 
 .overbox {
@@ -271,35 +74,6 @@
   overflow: inherit;
   border-radius: 10px;
   padding: 60px 50px 40px 50px;
-}
-
-.overbox .title,
-.overbox .button,
-.overbox .input {
-  z-index: 111;
-  position: relative;
-  color: #fff !important;
-  display: none;
-}
-
-.overbox .title {
-  width: 80%;
-}
-
-.overbox .input {
-  margin-top: 20px;
-}
-
-.overbox .input input,
-.overbox .input label {
-  color: #fff;
-}
-
-.overbox .material-button,
-.overbox .material-button .shape,
-.overbox .alt-2,
-.overbox .alt-2 .shape {
-  display: block;
 }
 
 .material-button,
@@ -332,7 +106,7 @@
 .material-button .shape:after,
 .alt-2 .shape:after {
   content: "";
-  background: #fff;
+  background: #82a43a;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -384,4 +158,49 @@
   text-decoration: none;
   list-style-type: none;
   outline: none;
+}
+.my-sign-in-input {
+  font-size: larger;
+  width: 100%;
+}
+.my-sign-in-container {
+  margin-top:100px;
+  margin-bottom: 50px;
+}
+.my-sign-in-action {
+  width: 100%;
+  font-size: larger;
+}
+.my-spacing-input-vertical {
+  margin: 30px 0 0 0;
+}
+.my-title {
+  width: 100%;
+  float: left;
+  line-height: 46px;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #558B2F;
+  position: relative;
+}
+
+.my-title:before {
+  content: "";
+  width: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -50px;
+  background: #558B2F;
+}
+
+.my-white {
+
+  background: #ffffff;
+}
+
+.my-primary {
+
+  background: #558B2F;
 }
