@@ -8,7 +8,8 @@ import { LoggingComponent } from './logging/logging.component';
 import {AppRoutingModule} from "./app-routing/app-routing.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {
-  MdButtonModule, MdCardModule, MdDatepickerModule, MdGridListModule, MdIconModule, MdInputModule, MdNativeDateModule,
+  MdButtonModule, MdCardModule, MdDatepickerModule, MdGridListModule, MdIconModule, MdInputModule, MdMenuModule,
+  MdNativeDateModule,
   MdSelectModule, MdTabsModule,
   MdToolbar,
   MdToolbarModule
@@ -33,6 +34,7 @@ import { MatchCardComponent } from './match-card/match-card.component';
     BrowserAnimationsModule,
     MdButtonModule,
     MdCardModule,
+    MdMenuModule,
     MdToolbarModule,
     MdGridListModule,
     MdIconModule,

@@ -1,37 +1,75 @@
 <div class="materialContainer">
   <div class="box">
     <div class="my-title">LOGIN</div>
-    <div class="my-sign-in-container">
-      <md-input-container class="my-sign-in-input">
-        <input mdInput placeholder="Email" type="email">
-      </md-input-container>
-      <md-input-container class="my-sign-in-input">
-        <input mdInput type="password" placeholder="Password">
-      </md-input-container>
-    </div>
-    <div class="my-spacing-input-vertical">
-      <button md-raised-button color="primary" class="my-sign-in-action my-spacing-input">Go</button>
-    </div>
-    <div class="my-spacing-input-vertical">
-      <button md-button color="primary" class="my-sign-in-action">Forgot your password?</button>
-    </div>
+    <form #loginForm="ngForm">
+      <div class="my-sign-in-container">
+        <md-input-container class="my-sign-in-input">
+          <input
+            mdInput
+            placeholder="Email"
+            type="email"
+            required
+            name="email"
+            [(ngModel)]="user.email"
+          >
+        </md-input-container>
+        <md-input-container class="my-sign-in-input">
+          <input
+            mdInput
+            type="password"
+            placeholder="Password"
+            required
+            name="password"
+            [(ngModel)]="user.password"
+          >
+        </md-input-container>
+      </div>
+      <div class="my-spacing-input-vertical">
+        <button type="submit" md-raised-button color="primary" class="my-sign-in-action my-spacing-input">Go</button>
+      </div>
+      <div class="my-spacing-input-vertical">
+        <button md-button color="primary" class="my-sign-in-action">Forgot your password?</button>
+      </div>
+    </form>
   </div>
   <div class="overbox">
     <div class="material-button alt-2"><span class="shape"></span></div>
     <div class="my-title">REGISTER</div>
-    <div class="my-sign-in-container">
-      <md-input-container class="my-overlap-container my-sign-in-input">
-        <input mdInput placeholder="Email" type="email">
-      </md-input-container>
-      <md-input-container class="my-overlap-container my-sign-in-input">
-        <input mdInput type="password" placeholder="Password">
-      </md-input-container>
-      <md-input-container class="my-overlap-container my-sign-in-input">
-        <input mdInput type="password" placeholder="Re-type password">
-      </md-input-container>
-    </div>
-    <div class="my-overlap-container my-spacing-input-vertical">
-      <button md-raised-button color="primary" class="my-sign-in-action my-spacing-input">Next</button>
-    </div>
+    <form #registerForm>
+      <div class="my-sign-in-container">
+        <md-input-container class="my-overlap-container my-sign-in-input">
+          <input
+            mdInput
+            placeholder="Email"
+            type="email"
+            required
+            name="email"
+            [(ngModel)]="user.email"
+          >
+        </md-input-container>
+        <md-input-container class="my-overlap-container my-sign-in-input">
+          <input
+            mdInput
+            type="password"
+            placeholder="Password"
+            required
+            name="password"
+            [(ngModel)]="user.password"
+          >
+        </md-input-container>
+        <md-input-container class="my-overlap-container my-sign-in-input">
+          <input
+            mdInput
+            type="password"
+            placeholder="Re-type password"
+            required
+            name="repassword"
+          >
+        </md-input-container>
+      </div>
+      <div class="my-overlap-container my-spacing-input-vertical">
+        <button md-raised-button color="primary" class="my-sign-in-action my-spacing-input">Next</button>
+      </div>
+    </form>
   </div>
 </div>
