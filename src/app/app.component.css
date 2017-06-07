@@ -1,12 +1,22 @@
 .my-greeting {
   font-family: 'Dancing Script', cursive;
   padding-left: 20px;
+  font-size: larger;
 }
 .my-main-content {
   padding: 20px 100px 20px 100px;
 }
 .my-spacer{
   flex: 1 1 auto;
+}
+.my-toolbar-button {
+  position: absolute;
+  right: 25px;
+  top:13px;
+  font-size: large;
+}
+.my-button-larger {
+  font-size: large;
 }
 /*md-grid-tile {*/
 /*background: lightblue;*/

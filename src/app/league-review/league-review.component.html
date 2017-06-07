@@ -1,25 +1,20 @@
 <md-card>
   <md-card-title class="text-center">Last results</md-card-title>
   <md-card-content class="text-center">
-    <span class="my-spacing-input">
-      <md-select placeholder="Choose league" [(ngModel)]="selectedLeague" name="league">
-        <md-option *ngFor="let league of leagues" [value]="league.value">
-          {{league.viewValue}}
-        </md-option>
-      </md-select>
-    </span>
-    <span class="my-spacing-input">
-      <md-input-container>
-        <input mdInput placeholder="Search" value="Bayern">
-      </md-input-container>
-    </span>
-    <span class="my-spacing-input">
-      <md-input-container>
-        <input mdInput [mdDatepicker]="myDatepicker">
-        <button mdSuffix [mdDatepickerToggle]="myDatepicker"></button>
-      </md-input-container>
-      <md-datepicker #myDatepicker></md-datepicker>
-    </span>
+    <md-select placeholder="Choose league" [(ngModel)]="selectedLeague" name="league"
+               class="my-input-size my-spacing-input">
+      <md-option *ngFor="let league of leagues" [value]="league.value">
+        {{league.viewValue}}
+      </md-option>
+    </md-select>
+    <md-input-container class="my-input-size my-spacing-input">
+      <input mdInput placeholder="Search" value="Bayern">
+    </md-input-container>
+    <md-input-container class="my-input-size my-spacing-input">
+      <input mdInput [mdDatepicker]="myDatepicker" readonly>
+      <button mdSuffix [mdDatepickerToggle]="myDatepicker"></button>
+    </md-input-container>
+    <md-datepicker #myDatepicker></md-datepicker>
   </md-card-content>
 </md-card>
 <div class="my-spacing-div">
@@ -29,14 +24,16 @@
       {{league.name}}
     </md-card-title>
     <md-tab-group>
-      <div class="my-container">
-
-        <md-tab label="Matches">
-          <app-match-card [match]="match"></app-match-card>
-        </md-tab>
-        <md-tab label="Table">Content 2</md-tab>
-        <md-tab label="Teams">Content 3</md-tab>
-      </div>
+      <md-tab label="Matches">
+        <md-grid-list [cols]="(media.registerQuery('gt-md') | async) ? 2 : 1" rowHeight="5:1">
+          <md-grid-tile *ngFor="let match of matches">
+            <app-match-card [match]="match"></app-match-card>
+          </md-grid-tile>
+        </md-grid-list>
+      </md-tab>
+      <md-tab label="Table">
+      </md-tab>
+      <md-tab label="Teams">Content 3</md-tab>
     </md-tab-group>
   </md-card>
 </div>

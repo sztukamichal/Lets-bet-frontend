@@ -9,7 +9,10 @@
 /*}*/
 
 .my-spacing-input {
-  margin: 10px 10px 10px 10px;
+   margin: 10px 10px 10px 10px;
+ }
+.my-input-size {
+  font-size: larger;
 }
 .my-spacing-div {
   margin: 50px 0 10px 0;

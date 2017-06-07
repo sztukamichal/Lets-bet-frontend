@@ -10,7 +10,8 @@ export class MatchCardComponent implements OnInit {
 
   @Input() match: Match;
 
-  constructor() { }
+  constructor() {
+    console.log(this.match)}
 
   ngOnInit() {
   }

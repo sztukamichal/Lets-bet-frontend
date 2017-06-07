@@ -7,6 +7,7 @@ import {TdMediaService} from "@covalent/core";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  navbarOpened: boolean ;
   constructor(
     public media: TdMediaService
   ) {}

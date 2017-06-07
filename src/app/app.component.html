@@ -1,5 +1,5 @@
 <td-layout-nav-list color="primary"
-                    opened="false"
+                    [opened]="media.registerQuery('gt-sm') | async"
                     [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'over'"
                     [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '250px' : '100%'">
   <!--[opened]="media.registerQuery('gt-sm') | async"-->
@@ -12,22 +12,20 @@
     <span class="my-greeting" *ngIf="!(media.registerQuery('gt-sm') | async)">
       Welcome, guest!
     </span>
-    <button md-icon-button [mdMenuTriggerFor]="menu" style="position: absolute; right: 10px; top:15px">
-      <md-icon>more_vert</md-icon>
+    <button md-button routerLink="/sign-in" class="my-toolbar-button">
+      Sign in
     </button>
-    <md-menu #menu="mdMenu">
-      <button md-menu-item routerLink="/league-review">Review leagues
-      </button>
-      <button md-menu-item routerLink="/sign-in">Sign in
-      </button>
-    </md-menu>
+    <!--<md-menu #menu="mdMenu">-->
+      <!--<button md-menu-item routerLink="/league-review">Review leagues-->
+      <!--</button>-->
+      <!--<button md-menu-item routerLink="/sign-in">Sign in-->
+      <!--</button>-->
+    <!--</md-menu>-->
   </div>
   <md-nav-list td-sidenav-content>
-    <ul>
-      <li>Home</li>
-      <li>Gameplay's</li>
-      <li>About</li>
-    </ul>
+    <button md-button routerLink="/league-review" class="my-button-larger" color="primary">
+      League review
+    </button>
   </md-nav-list>
   <div class="my-main-content bgc-light-green">
     <router-outlet></router-outlet>
