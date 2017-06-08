@@ -1,7 +1,7 @@
 <td-layout-nav-list color="primary"
                     [opened]="media.registerQuery('gt-md') | async"
                     [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'over'"
-                    [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '300px' : '100%'">
+                    [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '340px' : '100%'">
   <!--[opened]="media.registerQuery('gt-sm') | async"-->
   <div td-sidenav-toolbar-content>
     <span class="my-greeting" *ngIf="media.registerQuery('gt-sm') | async">
@@ -17,10 +17,12 @@
     </button>
   </div>
   <md-nav-list routerLink="/league-review" td-sidenav-content>
-    <md-card>
-      <img md-card-lg-image src="../assets/student.svg">
-      <md-card-header>Username</md-card-header>
-      <md-card-subtitle>Level</md-card-subtitle>
+    <md-card style="margin-bottom: 20px">
+      <md-card-header>
+        <img md-card-avatar src="../assets/student.svg">
+        <md-card-title>Username</md-card-title>
+        <md-card-subtitle>Level</md-card-subtitle>
+      </md-card-header>
       <md-card-content>
         Hi, I just want to have fun! Join to my tournament and we will see who can make better prediction!
         <div class="my-button-larger">
