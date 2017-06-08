@@ -8,10 +8,11 @@ import { LoggingComponent } from './logging/logging.component';
 import {AppRoutingModule} from "./app-routing/app-routing.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {
-  MdButtonModule, MdCardModule, MdDatepickerModule, MdGridListModule, MdIconModule, MdInputModule, MdMenuModule,
+  MdButtonModule, MdCardModule, MdDatepickerModule, MdGridListModule, MdIconModule, MdIconRegistry, MdInputModule,
+  MdListModule,
+  MdMenuModule,
   MdNativeDateModule,
   MdSelectModule, MdTabsModule,
-  MdToolbar,
   MdToolbarModule
 } from "@angular/material";
 import 'hammerjs';
@@ -44,9 +45,10 @@ import { MatchCardComponent } from './match-card/match-card.component';
     MdNativeDateModule,
     MdTabsModule,
     CovalentLayoutModule,
-    CovalentDataTableModule
+    CovalentDataTableModule,
+    MdListModule
   ],
-  providers: [TdMediaService],
+  providers: [TdMediaService, MdIconRegistry],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

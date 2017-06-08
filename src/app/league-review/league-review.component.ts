@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {Match} from '../model/Match';
-import {TdMediaService} from "@covalent/core";
+import {ITdDataTableColumn, TdMediaService} from "@covalent/core";
 
 @Component({
   selector: 'app-league-review',
@@ -51,6 +51,15 @@ export class LeagueReviewComponent implements OnInit, AfterViewInit {
   leagues = [
     {value: 'BD', viewValue: 'Bundesliga'},
     {value: 'PD', viewValue: 'Primera Division'}
+  ];
+  data: any[] = [
+    { sku: '1452-2', item: 'Pork Chops', price: 32.11 },
+    { sku: '1421-0', item: 'Prime Rib', price: 41.15 },
+  ];
+  columns: ITdDataTableColumn[] = [
+    { name: 'sku', label: 'SKU #', tooltip: 'Stock Keeping Unit' },
+    { name: 'item', label: 'Item name' },
+    { name: 'price', label: 'Price (US$)', numeric: true, format: v => v.toFixed(2) },
   ];
 
   constructor(
