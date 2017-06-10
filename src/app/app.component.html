@@ -1,6 +1,6 @@
 <td-layout-nav-list color="primary"
-                    [opened]="media.registerQuery('gt-md') | async"
-                    [mode]="(media.registerQuery('gt-sm') | async) ? 'side' : 'over'"
+                    [opened]="media.registerQuery('gt-lg') | async"
+                    [mode]="(media.registerQuery('gt-lg') | async) ? 'side' : 'over'"
                     [sidenavWidth]="(media.registerQuery('gt-xs') | async) ? '340px' : '100%'">
   <!--[opened]="media.registerQuery('gt-sm') | async"-->
   <div td-sidenav-toolbar-content>
@@ -16,7 +16,7 @@
       Sign in
     </button>
   </div>
-  <md-nav-list routerLink="/league-review" td-sidenav-content>
+  <md-nav-list td-sidenav-content>
     <md-card style="margin-bottom: 20px">
       <md-card-header>
         <img md-card-avatar src="../assets/student.svg">
@@ -37,12 +37,12 @@
         <button md-button>Settings</button>
       </md-card-actions>
     </md-card>
-    <a md-list-item>
+    <a md-list-item routerLink="/league-review">
       <md-icon md-list-avatar svgIcon="league-review"></md-icon>
       <h3 md-line>Review leagues</h3>
     </a>
     <md-divider md-inset></md-divider>
-    <a md-list-item>
+    <a md-list-item routerLink="/create-tournament">
       <md-icon md-list-avatar svgIcon="tournament-create"></md-icon>
       <h3 md-line>Create tournament</h3>
     </a>

@@ -42,7 +42,8 @@
   height: calc(100% - 40px);
   overflow: auto;
   display: block;
-  background-image: url("assets/background.jpg");
+  /*background-image: url("assets/background.jpg");*/
+  background-image: url("assets/poly.png");
   background-size: cover;
 }
 

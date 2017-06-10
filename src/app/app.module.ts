@@ -17,15 +17,21 @@ import {
 } from "@angular/material";
 import 'hammerjs';
 import { LeagueReviewComponent } from './league-review/league-review.component'
-import {CovalentDataTableModule, CovalentLayoutModule, TdMediaService} from "@covalent/core";
+import {CovalentDataTableModule, CovalentLayoutModule, CovalentStepsModule, TdMediaService} from "@covalent/core";
 import { MatchCardComponent } from './match-card/match-card.component';
+import { CreateTournamentComponent } from './create-tournament/create-tournament.component';
+import {CovalentHttpModule} from "@covalent/http";
+import {CovalentHighlightModule} from "@covalent/highlight";
+import {CovalentMarkdownModule} from "@covalent/markdown";
+import {CovalentDynamicFormsModule} from "@covalent/dynamic-forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     LoggingComponent,
     LeagueReviewComponent,
-    MatchCardComponent
+    MatchCardComponent,
+    CreateTournamentComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +52,12 @@ import { MatchCardComponent } from './match-card/match-card.component';
     MdTabsModule,
     CovalentLayoutModule,
     CovalentDataTableModule,
-    MdListModule
+    MdListModule,
+    CovalentStepsModule,
+    CovalentHttpModule.forRoot(),
+    CovalentHighlightModule,
+    CovalentMarkdownModule,
+    CovalentDynamicFormsModule,
   ],
   providers: [TdMediaService, MdIconRegistry],
   bootstrap: [AppComponent]

@@ -1,4 +1,7 @@
 @import '~@angular/material/theming';
+@import '~@covalent/core/theming/all-theme';
+@import '~@covalent/markdown/markdown-theme';
+@import '~@covalent/highlight/highlight-theme';
 @include mat-core();
 
 $my-app-primary: mat-palette($mat-light-green, 800);
@@ -8,3 +11,6 @@ $my-app-warn:    mat-palette($mat-red);
 $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
 
 @include angular-material-theme($my-app-theme);
+@include covalent-theme($my-app-theme);
+@include covalent-markdown-theme($my-app-theme);
+@include covalent-highlight-theme();

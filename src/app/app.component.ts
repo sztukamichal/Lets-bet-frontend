@@ -15,9 +15,9 @@ export class AppComponent {
     public mdIconRegistry: MdIconRegistry,
     public sanitizer: DomSanitizer
   ) {
-    mdIconRegistry.addSvgIcon("league-review", sanitizer.bypassSecurityTrustResourceUrl("/assets/trophy.svg"));
-    mdIconRegistry.addSvgIcon("tournament-review", sanitizer.bypassSecurityTrustResourceUrl("/assets/005-podium.svg"));
-    mdIconRegistry.addSvgIcon("tournament-create", sanitizer.bypassSecurityTrustResourceUrl("/assets/002-teamwork.svg"));
+    mdIconRegistry.addSvgIcon("league-review", sanitizer.bypassSecurityTrustResourceUrl("/assets/trophyc.svg"));
+    mdIconRegistry.addSvgIcon("tournament-review", sanitizer.bypassSecurityTrustResourceUrl("/assets/podium.svg"));
+    mdIconRegistry.addSvgIcon("tournament-create", sanitizer.bypassSecurityTrustResourceUrl("/assets/teamwork.svg"));
     mdIconRegistry.addSvgIcon("tournament-create2", sanitizer.bypassSecurityTrustResourceUrl("/assets/calendar.svg"));
     mdIconRegistry.addSvgIcon("us", sanitizer.bypassSecurityTrustResourceUrl("/assets/student.svg"));
   }
