@@ -2,14 +2,25 @@
   <td-steps [mode]="(media.registerQuery('gt-md') | async) ? 'horizontal' : 'vertical'">
     <td-step #step1 label="Basic settings" sublabel="Here we go!" [active]="true" [state]="stateStep2" disableRipple>
       Basic settings
+      <form>
+        <md-input-container>
+          <input
+            mdInput
+            type="text"
+            placeholder="Name"
+            required
+            name="name"
+          >
+        </md-input-container>
+      </form>
     </td-step>
     <td-step label="Rule configuration" sublabel="Here we go!" [active]="false">
       Rule configuration
     </td-step>
-    <td-step label="Matches" sublabel="Here we go!" disabled="true">
+    <td-step label="Matches" sublabel="Here we go!">
       MAtchees
     </td-step>
-    <td-step label="Final stage" sublabel="Here we go!" disabled="true">
+    <td-step label="Final stage" sublabel="Here we go!">
       Final stage
     </td-step>
   </td-steps>
